@@ -62,10 +62,10 @@ class OnBoardingContant extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 70,
               ),
               Image.asset(
-                "assets/images/Group 60.png",
+                "assets/images/bottom.png",
               ),
             ],
           );

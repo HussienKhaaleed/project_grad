@@ -14,8 +14,8 @@ class ChatApp extends StatelessWidget {
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
-        // scaffoldBackgroundColor: const Color.fromARGB(240, 242, 255, 255),
-      ),
+          // scaffoldBackgroundColor: const Color.fromARGB(240, 242, 255, 255),
+          ),
     );
   }
 }
