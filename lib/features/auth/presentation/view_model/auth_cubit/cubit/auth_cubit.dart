@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_test/features/auth/presentation/view_model/auth_cubit/cubit/auth_state.dart';
@@ -17,6 +18,7 @@ class AuthCubit extends Cubit<AuthState> {
         email: emailAddress!,
         password: password!,
       );
+      await addUserProfile();
       await verifyEmail();
       emit(SignupSucessState());
     } on FirebaseAuthException catch (e) {
@@ -29,8 +31,7 @@ class AuthCubit extends Cubit<AuthState> {
           SignupFailureState(
               errMessage: 'The account already exists for that email.'),
         );
-      }
-      else {
+      } else {
         emit(
           SignupFailureState(errMessage: e.code),
         );
@@ -72,9 +73,7 @@ class AuthCubit extends Cubit<AuthState> {
     await FirebaseAuth.instance.currentUser!.sendEmailVerification();
   }
 
-
-
-Future<void> resetPasswordWithLink() async {
+  Future<void> resetPasswordWithLink() async {
     try {
       emit(ResetPasswordLoadingState());
       await FirebaseAuth.instance.sendPasswordResetEmail(email: emailAddress!);
@@ -82,5 +81,14 @@ Future<void> resetPasswordWithLink() async {
     } catch (e) {
       emit(ResetPasswordFailureState(errMessage: e.toString()));
     }
+  }
+
+  Future<void> addUserProfile() async {
+    CollectionReference users = FirebaseFirestore.instance.collection("users");
+    await users.add({
+      "email": emailAddress,
+      "frist_name": fristName,
+      "last_name": lastName,
+    });
   }
 }
