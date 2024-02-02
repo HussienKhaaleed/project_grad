@@ -29,7 +29,8 @@ class AuthCubit extends Cubit<AuthState> {
           SignupFailureState(
               errMessage: 'The account already exists for that email.'),
         );
-      } else {
+      }
+      else {
         emit(
           SignupFailureState(errMessage: e.code),
         );
@@ -69,5 +70,17 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<void> verifyEmail() async {
     await FirebaseAuth.instance.currentUser!.sendEmailVerification();
+  }
+
+
+
+Future<void> resetPasswordWithLink() async {
+    try {
+      emit(ResetPasswordLoadingState());
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: emailAddress!);
+      emit(ResetPasswordSuccessState());
+    } catch (e) {
+      emit(ResetPasswordFailureState(errMessage: e.toString()));
+    }
   }
 }

@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:project_test/core/routers/nav.dart';
 
 class homeBody extends StatelessWidget {
   const homeBody({super.key});
@@ -9,7 +11,10 @@ class homeBody extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              FirebaseAuth.instance.signOut();
+              customReplacementNavigate(context, "/login");
+            },
             icon: Icon(Icons.logout),
           ),
         ],
