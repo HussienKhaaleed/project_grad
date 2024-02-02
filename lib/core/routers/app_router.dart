@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:project_test/core/service/service_locter.dart';
 import 'package:project_test/features/auth/presentation/view_model/auth_cubit/cubit/auth_cubit.dart';
 import 'package:project_test/features/auth/presentation/views/forget_password.dart';
 import 'package:project_test/features/auth/presentation/views/login_View.dart';
@@ -18,17 +17,17 @@ abstract class AppRouter {
         builder: (context, State) => onBoardingView(),
       ),
       GoRoute(
-        path: "/login",
+        path: "/register",
         builder: (context, State) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
-          child: const loginnView(),
+          create: (context) => AuthCubit(),
+          child: const registerView(),
         ),
       ),
       GoRoute(
-        path: "/register",
+        path: "/login",
         builder: (context, State) => BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
-          child: const registerView(),
+          create: (context) => AuthCubit(),
+          child: const loginnView(),
         ),
       ),
       GoRoute(

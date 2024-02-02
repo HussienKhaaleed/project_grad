@@ -146,9 +146,9 @@ class _registerBodyState extends State<registerBody> {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                  onPressed: () {
+                                  onPressed: () async {
                                     if (formkey.currentState!.validate()) {
-                                      BlocProvider.of<AuthCubit>(context)
+                                      await BlocProvider.of<AuthCubit>(context)
                                           .signUpWithEmailAndPassword();
                                     }
                                   },
@@ -162,6 +162,7 @@ class _registerBodyState extends State<registerBody> {
                           ),
                           already_have_account_text(
                             onTap: () {
+                              // GoRouter.of(context).pop("/login");
                               customReplacementNavigate(context, "/login");
                             },
                             fristText: 'Already have an account?',

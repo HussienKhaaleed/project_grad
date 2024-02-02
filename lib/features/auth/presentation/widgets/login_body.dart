@@ -106,7 +106,7 @@ class _loginnBodyState extends State<loginnBody> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              customReplacementNavigate(context, "");
+                              customReplacementNavigate(context, "/forgetpassword");
                             },
                             child: Align(
                               alignment: AlignmentDirectional.centerEnd,
@@ -134,9 +134,9 @@ class _loginnBodyState extends State<loginnBody> {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
-                                  onPressed: () {
+                                  onPressed: () async {
                                     if (formkey.currentState!.validate()) {
-                                      BlocProvider.of<AuthCubit>(context)
+                                      await BlocProvider.of<AuthCubit>(context)
                                           .signInWithEmailAndPassword();
                                     }
                                   },
@@ -150,6 +150,7 @@ class _loginnBodyState extends State<loginnBody> {
                           ),
                           already_have_account_text(
                             onTap: () {
+                              // GoRouter.of(context).push("/register");
                               customReplacementNavigate(context, "/register");
                             },
                             fristText: '',
