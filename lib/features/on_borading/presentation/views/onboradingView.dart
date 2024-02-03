@@ -1,8 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:project_test/core/database/cashe_helper.dart';
-import 'package:project_test/core/routers/nav.dart';
-import 'package:project_test/core/service/service_locter.dart';
 import 'package:project_test/features/on_borading/presentation/widgets/on_boarding_cont.dart';
 
 class onBoardingView extends StatefulWidget {
@@ -13,21 +9,21 @@ class onBoardingView extends StatefulWidget {
 }
 
 class _onBoardingViewState extends State<onBoardingView> {
-  @override
-  void initState() {
-    bool isOnBoardingVisisted =
-        getIt<CacheHelper>().getData(key: "isonBoardingVisited") ?? false;
-    if (isOnBoardingVisisted == true) {
-      FirebaseAuth.instance.currentUser == null
-          ? delayedNavigate(context, "/login")
-          : FirebaseAuth.instance.currentUser!.emailVerified == true
-              ? delayedNavigate(context, "/home")
-              : delayedNavigate(context, "/login");
-    } else {
-      delayedNavigate(context, "/onBoarding");
-    }
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   bool isOnBoardingVisisted =
+  //       getIt<CacheHelper>().getData(key: "isonBoardingVisited") ?? false;
+  //   if (isOnBoardingVisisted == true) {
+  //     FirebaseAuth.instance.currentUser == null
+  //         ? delayedNavigate(context, "/login")
+  //         : FirebaseAuth.instance.currentUser!.emailVerified == true
+  //             ? delayedNavigate(context, "/home")
+  //             : delayedNavigate(context, "/login");
+  //   } else {
+  //     delayedNavigate(context, "/onBoarding");
+  //   }
+  //   super.initState();
+  // }
 
   final PageController _controller = PageController(initialPage: 0);
 
@@ -44,11 +40,11 @@ class _onBoardingViewState extends State<onBoardingView> {
   }
 }
 
-void delayedNavigate(context, path) {
-  Future.delayed(
-    const Duration(seconds: 0),
-    () {
-      customReplacementNavigate(context, path);
-    },
-  );
-}
+// void delayedNavigate(context, path) {
+//   Future.delayed(
+//     const Duration(seconds: 0),
+//     () {
+//       customReplacementNavigate(context, path);
+//     },
+//   );
+// }

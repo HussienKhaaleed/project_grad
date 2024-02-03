@@ -5,6 +5,7 @@ import 'package:project_test/features/auth/presentation/views/forget_password.da
 import 'package:project_test/features/auth/presentation/views/login_View.dart';
 import 'package:project_test/features/auth/presentation/views/register_View.dart';
 import 'package:project_test/features/home/presentation/views/home_view.dart';
+import 'package:project_test/features/on_borading/presentation/views/logo_view.dart';
 import 'package:project_test/features/on_borading/presentation/views/onboradingView.dart';
 
 abstract class AppRouter {
@@ -14,6 +15,10 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: "/",
+        builder: (context, State) => logoView(),
+      ),
+      GoRoute(
+        path: "/onBoarding",
         builder: (context, State) => onBoardingView(),
       ),
       GoRoute(
