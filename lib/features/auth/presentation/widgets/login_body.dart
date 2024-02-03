@@ -150,7 +150,7 @@ class _loginnBodyState extends State<loginnBody> {
                           ),
                           already_have_account_text(
                             onTap: () {
-                              // GoRouter.of(context).push("/register");
+                              
                               customReplacementNavigate(context, "/register");
                             },
                             fristText: '',

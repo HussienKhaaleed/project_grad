@@ -92,7 +92,7 @@ class _forgetPasswordBodyState extends State<forgetPasswordBody> {
                           SizedBox(
                             height: 200,
                           ),
-                          state is SignInLoadingState
+                          state is ResetPasswordLoadingState
                               ? CircularProgressIndicator(
                                   color: Color(0xFF07A66FF),
                                 )
