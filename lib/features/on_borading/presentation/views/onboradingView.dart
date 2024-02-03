@@ -15,9 +15,8 @@ class onBoardingView extends StatefulWidget {
 class _onBoardingViewState extends State<onBoardingView> {
   @override
   void initState() {
-    super.initState();
     bool isOnBoardingVisisted =
-        getIt<CacheHelper>().getData(key: "isOnBoardingVisited") ?? false;
+        getIt<CacheHelper>().getData(key: "isonBoardingVisited") ?? false;
     if (isOnBoardingVisisted == true) {
       FirebaseAuth.instance.currentUser == null
           ? delayedNavigate(context, "/login")
@@ -25,8 +24,9 @@ class _onBoardingViewState extends State<onBoardingView> {
               ? delayedNavigate(context, "/home")
               : delayedNavigate(context, "/login");
     } else {
-      delayedNavigate(context, "/home");
+      delayedNavigate(context, "/onBoarding");
     }
+    super.initState();
   }
 
   final PageController _controller = PageController(initialPage: 0);

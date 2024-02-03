@@ -89,10 +89,10 @@ class _OnBoardingContantState extends State<OnBoardingContant> {
                     )
                   : CustomBtn(
                       onPressed: () {
-                        getIt<CacheHelper>().saveData(
-                          key: "isonBoardingVisited",
-                          value: true,
-                        );
+                        // getIt<CacheHelper>().saveData(
+                        //   key: "isonBoardingVisited",
+                        //   value: true,
+                        // );
                         widget.controller.nextPage(
                           duration: Duration(microseconds: 200),
                           curve: Curves.bounceIn,
