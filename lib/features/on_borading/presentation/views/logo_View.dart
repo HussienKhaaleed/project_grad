@@ -20,7 +20,7 @@ class _logoViewState extends State<logoView> {
       FirebaseAuth.instance.currentUser == null
           ? delayedNavigate(context, "/login")
           : FirebaseAuth.instance.currentUser!.emailVerified == true
-              ? delayedNavigate(context, "/home")
+              ? delayedNavigate(context, "/homeNavBar")
               : delayedNavigate(context, "/login");
     } else {
       delayedNavigate(context, "/onBoarding");

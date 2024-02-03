@@ -58,7 +58,7 @@ class _loginnBodyState extends State<loginnBody> {
                   listener: (context, state) {
                     if (state is SignInSucessState) {
                       FirebaseAuth.instance.currentUser!.emailVerified
-                          ? customReplacementNavigate(context, "/home")
+                          ? customReplacementNavigate(context, "/homeNavBar")
                           : showToast("Please Verify Your Account", Colors.red);
                       ;
                     } else if (state is SignInFailureState) {
@@ -106,7 +106,8 @@ class _loginnBodyState extends State<loginnBody> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              customReplacementNavigate(context, "/forgetpassword");
+                              customReplacementNavigate(
+                                  context, "/forgetpassword");
                             },
                             child: Align(
                               alignment: AlignmentDirectional.centerEnd,
@@ -150,7 +151,6 @@ class _loginnBodyState extends State<loginnBody> {
                           ),
                           already_have_account_text(
                             onTap: () {
-                              
                               customReplacementNavigate(context, "/register");
                             },
                             fristText: '',
