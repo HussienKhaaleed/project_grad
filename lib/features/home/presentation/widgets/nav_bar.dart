@@ -19,8 +19,8 @@ class NavBar extends StatelessWidget {
       backgroundColor: Color(0xFF07A66FF),
       decoration: NavBarDecoration(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
+          topLeft: Radius.circular(16),
+          topRight: Radius.circular(16),
         ),
       ),
     );
