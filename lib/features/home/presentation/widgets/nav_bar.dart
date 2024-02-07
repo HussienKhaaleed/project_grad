@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:project_test/features/cart/presentation/views/cart_view.dart';
 import 'package:project_test/features/home/presentation/views/home_view.dart';
@@ -50,7 +51,7 @@ List<PersistentBottomNavBarItem> _navBarsItems() {
     PersistentBottomNavBarItem(
       inactiveColorPrimary: Colors.white,
       activeColorPrimary: Colors.white,
-      icon: Icon(Icons.email),
+      icon: FaIcon(FontAwesomeIcons.solidUser),
     ),
   ];
 }
