@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAwp9KjCN4cSqspF9HDs9UjnEt5uBRo_Ug',
-    appId: '1:473883112738:web:62a69594d57ca334e6e17b',
-    messagingSenderId: '473883112738',
-    projectId: 'grad-projectt',
-    authDomain: 'grad-projectt.firebaseapp.com',
-    storageBucket: 'grad-projectt.appspot.com',
-    measurementId: 'G-8DZSJW6QVJ',
+    apiKey: 'AIzaSyCx-M5xkIbmjesp-0ns-bOkd4Ga7uAXv0c',
+    appId: '1:1081318479617:web:8da2d32f30c5e45d4eed00',
+    messagingSenderId: '1081318479617',
+    projectId: 'solar-power-91ffa',
+    authDomain: 'solar-power-91ffa.firebaseapp.com',
+    storageBucket: 'solar-power-91ffa.appspot.com',
+    measurementId: 'G-T3RV8NY702',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBxk3igXt4CGX97UzgOxqz73co-2xmc__M',
-    appId: '1:473883112738:android:5e74a235febec5a2e6e17b',
-    messagingSenderId: '473883112738',
-    projectId: 'grad-projectt',
-    storageBucket: 'grad-projectt.appspot.com',
+    apiKey: 'AIzaSyDHc0E6My06eyocJeHgELWNbwf8E9YhRs0',
+    appId: '1:1081318479617:android:3e8e04d0fc32cbac4eed00',
+    messagingSenderId: '1081318479617',
+    projectId: 'solar-power-91ffa',
+    storageBucket: 'solar-power-91ffa.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCEDP29z8Xb26ppmiI7cKqwJAXrHnHPab4',
-    appId: '1:473883112738:ios:f2f11ec74a0a5a71e6e17b',
-    messagingSenderId: '473883112738',
-    projectId: 'grad-projectt',
-    storageBucket: 'grad-projectt.appspot.com',
+    apiKey: 'AIzaSyB7dEL1lkeAr0POUDnwkt_9BfbWvr3JQqA',
+    appId: '1:1081318479617:ios:b63bbbce59582b4a4eed00',
+    messagingSenderId: '1081318479617',
+    projectId: 'solar-power-91ffa',
+    storageBucket: 'solar-power-91ffa.appspot.com',
     iosBundleId: 'com.example.projectTest',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCEDP29z8Xb26ppmiI7cKqwJAXrHnHPab4',
-    appId: '1:473883112738:ios:2522f7ca08f1f33de6e17b',
-    messagingSenderId: '473883112738',
-    projectId: 'grad-projectt',
-    storageBucket: 'grad-projectt.appspot.com',
+    apiKey: 'AIzaSyB7dEL1lkeAr0POUDnwkt_9BfbWvr3JQqA',
+    appId: '1:1081318479617:ios:73d63e798771535b4eed00',
+    messagingSenderId: '1081318479617',
+    projectId: 'solar-power-91ffa',
+    storageBucket: 'solar-power-91ffa.appspot.com',
     iosBundleId: 'com.example.projectTest.RunnerTests',
   );
 }
